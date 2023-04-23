@@ -8,6 +8,70 @@
 .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #000;
+    background-color: #fff;
     margin: 6px 0;
+    transition: 0.3s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.myTopNav {
+    background: #333;
+    display: flex;
+}
+
+.topnav {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.topnav:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav.active {
+    background-color: #04aa6d;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav:not(:first-of-type) {
+        display: none;
+    }
+
+    .myTopNav {
+        position: relative;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 10px;
+    }
+
+    .myTopNav.responsive {
+        display: block;
+    }
+
+    .myTopNav.responsive a {
+        display: block;
+        text-align: left;
+    }
 }

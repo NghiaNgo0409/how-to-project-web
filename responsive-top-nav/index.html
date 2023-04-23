@@ -14,15 +14,26 @@
     </head>
     <body>
         <div class="myTopNav">
-            <a href="#!" class="topnav">Home</a>
+            <a href="#!" class="topnav active">Home</a>
             <a href="#!" class="topnav">News</a>
             <a href="#!" class="topnav">Contact</a>
             <a href="#!" class="topnav">About</a>
-            <div class="menu-icon">
+            <div class="menu-icon" onclick="handleClick()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </div>
+        <script>
+            const $ = document.querySelector.bind(document);
+
+            const menu_icon = $(".menu-icon");
+            const myTopNav = $(".myTopNav");
+
+            const handleClick = () => {
+                menu_icon.classList.toggle("change");
+                myTopNav.classList.toggle("responsive");
+            };
+        </script>
     </body>
 </html>
